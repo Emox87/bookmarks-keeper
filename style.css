@@ -1,3 +1,4 @@
+/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 /* CSS VARIABLES */
@@ -8,6 +9,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
@@ -20,17 +22,183 @@ body {
 
 h1 {
   color: white;
-  padding: 20px;
+  padding: 2rem;
   background: rgba(0, 0, 0, .5);
   border-radius: var(--border-radius);
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  width: 275px;
-  margin: 20px auto 10px;
+  width: 27.5rem;
+  margin: 2rem auto 1rem;
   user-select: none;
 }
 
 h1:hover {
   background: rgba(0, 0, 0, .8);
+}
+
+/* Bookmarks */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: rgba(0, 0, 0, .5);
+  color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, .6);
+}
+
+a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.fa-trash {
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+.name {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.name img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+  vertical-align: sub;
+}
+
+/* Modal */
+.modal-container {
+  background: rgba(0, 0, 0, .6);
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .8);
+  max-width: 95%;
+  width: 50rem;
+  animation: modalopen 5s;
+}
+
+@keyframes modalopen {
+  /* From to same as 0% to 100% */
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+.close-icon {
+  float: right;
+  color: white;
+  font-size: 2.4rem;
+  position: relative;
+  top: 1.3rem;
+  right: 1.3rem;
+  cursor: pointer;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.modal-content {
+  padding: 2rem;
+  background: whitesmoke;
+}
+
+/* Form */
+.form-group {
+  height: 5.5rem;
+}
+
+.form-input {
+  width: 97%;
+  padding: .5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  display: block;
+  outline: none;
+}
+
+.form-label {
+  color: var(--primary-color);
+  display: block;
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: var(--primary-color);
+  height: 3rem;
+  width: 10rem;
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 60rem) {
+  .container {
+    flex-direction: column;
+  }
 }

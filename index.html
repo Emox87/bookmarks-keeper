@@ -12,6 +12,58 @@
     <!-- OPEN MODAL -->
     <h1 id="show-modal">Add Bookmark</h1>
     
+    <!-- BOOOKMARKS -->
+    <div class="container" id="bookmarks-container">
+        <div class="item">
+            <i class="fas fa-trash" id="delete-bookmark" title="Delete Bookmark"></i>
+            <div class="name">
+                <img src="https://img.icons8.com/?size=512&id=dxoYK8bxqiJr&format=png" alt="Bookmark icon">
+                <a href="https://google.com" target="_blank">Google</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-trash" id="delete-bookmark" title="Delete Bookmark"></i>
+            <div class="name">
+                <img src="https://img.icons8.com/?size=512&id=dxoYK8bxqiJr&format=png" alt="Bookmark icon">
+                <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-trash" id="delete-bookmark" title="Delete Bookmark"></i>
+            <div class="name">
+                <img src="https://img.icons8.com/?size=512&id=dxoYK8bxqiJr&format=png" alt="Bookmark icon">
+                <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <i class="fas fa-times close-icon" id="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Bookmark</h3>
+            </div>
+            <div class="modal-content">
+                <form id="bookmark-form">
+                    
+                    <!-- Website Name -->
+                    <div class="form-group">
+                        <label for="website-name" class="form-label">Website Name</label>
+                        <input type="text" id="website-name" class="form-input">
+                    </div>
+                    
+                    <!-- Website URL -->
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input type="text" id="website-url" class="form-input">
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
     <!-- Script -->
     <script src="script.js"></script>
 </body>
