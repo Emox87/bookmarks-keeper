@@ -29,7 +29,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   width: 27.5rem;
-  margin: 2rem auto 1rem;
+  margin: 2rem auto 4rem;
   user-select: none;
 }
 
@@ -73,13 +73,13 @@ a:active {
   text-decoration: underline;
 }
 
-.fa-trash {
+.fa-times {
   float: right;
   cursor: pointer;
   z-index: 2;
 }
 
-.fa-trash:hover {
+.fa-times:hover {
   color: red;
 }
 
@@ -117,7 +117,7 @@ a:active {
   box-shadow: 0 0 1rem rgba(0, 0, 0, .8);
   max-width: 95%;
   width: 50rem;
-  animation: modalopen 5s;
+  animation: modalopen .4s;
 }
 
 @keyframes modalopen {
